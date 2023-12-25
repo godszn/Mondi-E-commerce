@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url(font/Poppins-Regular.ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blur {
+    width: 200px;
+    height: 130px;
+    background: radial-gradient(circle at 100%, lightgrey, lightgrey, lightgrey, white);
+    position: absolute;
+    left: 7%;
+    top: -13% !important;
+    filter: blur(125px) !important;
+    border-radius: 50%;
+    box-shadow: 1px 33px 245px white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Main-wrapper {
+    background-color: black;
+    height: 800px;
 }
 
-.App-link {
-  color: #61dafb;
+/********** Navbar Component **********/
+
+.nav-menu li {
+    color: #8B8E99;
+    margin: .5rem;
+    margin-right: .5rem;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*********** MainContent Component **********/
+
+.search-input {
+    align-items: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 0.4rem;
+    margin-top: 1rem;
+}
+
+.search-btn {
+    padding: 0.5rem;
+    background-color: blue;
+    border-radius: 0.5rem;
+    width: 79px;
+    color: white;
+}
+
+/*********** Sample Component **********/
+
+.sample-container {
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.sample-container:hover {
+    transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    transform: scale(1.02);
+}
+
+/********** Products Component **********/
+
+.Product-widgets p {
+    font-weight: 550;
+}
+
+.Product-widgets img {
+    transition: all .5s ease-in-out;
+}
+
+.Product-widgets img:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.02);
+}
+
+/********** Newsletter Component **********/
+
+
+.subscribe-input {
+    align-items: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 0.4rem;
+    margin-top: 1rem;
+}
+
+.subscribe-btn {
+    padding: 0.5rem;
+    background-color: blue;
+    border-radius: 0.5rem;
+    width: 100px;
+    color: white;
 }
