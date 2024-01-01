@@ -56,6 +56,25 @@ body {
     color: white;
 }
 
+.watch-widget {
+    position: relative;
+}
+
+.watch-widget img {
+    position: absolute;
+    animation: anime 15s ease-in-out infinite;
+}
+
+@keyframes anime {
+     50% {
+      transform: rotate( 360deg);
+    } 
+/* 
+    100% {
+        transform: translateY(20px);
+    } */
+}
+
 /*********** Sample Component **********/
 
 .sample-container {
@@ -84,6 +103,17 @@ body {
     transform: scale(1.02);
 }
 
+.cart-btn {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    width: 100px;
+    border-radius: 0.4rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: small;
+}
+
 /********** Newsletter Component **********/
 
 
@@ -103,3 +133,28 @@ body {
     width: 100px;
     color: white;
 }
+
+.notification {
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0);
+  }
+  
+  .notification.exiting {
+    transform: translateY(-100%);
+  }
+  
+  /********** Notification Component **********/
+
+  .viewCart {
+    background-color: white;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    font-size: smaller;
+    width: 100px;
+    color: black;
+    font-weight: 700;
+  }
+
+  .notif-wrapper-gen {
+    transition: all 700ms ease-in-out;
+  }

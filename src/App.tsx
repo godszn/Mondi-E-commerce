@@ -1,39 +1,18 @@
-import React, {useState} from 'react';
-import Navbar from './Components/Navbar'
-import MainContent from './Components/MainContent';
-import Sample from './Components/Sample';
-import Products from './Components/Products';
-import Rating from './Components/Rating';
-import Newsletter from './Components/Newsletter';
-import Footer from './Components/Footer';
-import './App.css'
+// Import necessary components from react-router-dom
+import { Route , Routes } from "react-router-dom";
+// Import your components
+import MainComponent from './Components/MainComponent';
+import CartComponent from './Components/CartComponent';
 
-const App: React.FC = () => {
- 
-  const [count , setCount] =useState(0);
-
-  const handleCounter = () => {
-    setCount(
-      count + 1
-    )
-  }
-
-  console.log('you have added' , count, 'to the your cart');
-  
-
+// Define your routes using the Routes component
+function App() {
   return (
-    <div className="App">
-      <div className="blur absolute top-0"></div>
-      <section className='Main-wrapper'>
-        <Navbar count = {count} />
-        <MainContent />
-      </section>
-      <Sample />
-      <Products oncardClick = {handleCounter}/>
-      <Rating/>
-      <Newsletter/>
-      <Footer/>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<MainComponent />} />
+        <Route path="/cart" element={<CartComponent />} />
+      </Routes>
+    </>
   );
 }
 

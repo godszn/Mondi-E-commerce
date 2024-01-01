@@ -28,7 +28,7 @@ function MainContent() {
                         </button>
                     </div>
                 </div>
-                <div className='w-[30%]'>
+                <div className='w-[30%] watch-widget'>
                     <img src={watch} alt="" />
                 </div>
             </div>

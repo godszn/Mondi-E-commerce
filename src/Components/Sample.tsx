@@ -1,13 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import sample1 from '../assets/samp1.png'
 import sample2 from '../assets/samp2.png'
 import sample3 from '../assets/samp3.png'
+// @ts-ignore
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 function Sample() {
+    useEffect(() =>{
+        Aos.init();
+      })
     return (
         <div>
             <section className="sample-wrapper grid grid-cols-3 gap-4 mt-[2rem] ml-[13%] mr-[13%] p-4">
-                <div className='flex sample-container p-6' style={{ backgroundColor: 'rgb(223 216 216)', borderRadius: '1rem' }}>
+                <div data-aos = 'fade-left' data-aos-duration = '1500' className='flex sample-container p-6' style={{ backgroundColor: 'rgb(223 216 216)', borderRadius: '1rem' }}>
                     <img src={sample1} className='h-fit cursor-pointer' />
                     <section className='ml-4 flex flex-col justify-center'>
                     <h3 style={{fontSize: '25px' , fontWeight: '600'}}>
@@ -18,7 +25,7 @@ function Sample() {
                         </p>
                     </section>
                 </div>
-                <div className='flex sample-container p-6' style={{ backgroundColor: 'rgb(223 216 216)', borderRadius: '1rem' }}>
+                <div  data-aos = 'fade-left' data-aos-duration = '2000' className='flex sample-container p-6' style={{ backgroundColor: 'rgb(223 216 216)', borderRadius: '1rem' }}>
                     <img src={sample2} className='h-fit cursor-pointer' />
                     <section className='ml-4 flex flex-col justify-center'>
                         <h3 style={{fontSize: '25px' , fontWeight: '600'}}>
@@ -29,7 +36,7 @@ function Sample() {
                         </p>
                     </section>
                 </div>
-                <div className='flex sample-container p-6' style={{ backgroundColor: 'rgb(223 216 216)', borderRadius: '1rem' }}>
+                <div  data-aos = 'fade-left' data-aos-duration = '2500' className='flex sample-container p-6' style={{ backgroundColor: 'rgb(223 216 216)', borderRadius: '1rem' }}>
                     <img src={sample3} className='h-fit cursor-pointer' />
                     <section className='ml-4 flex flex-col justify-center'>
                     <h3 style={{fontSize: '25px' , fontWeight: '600'}}>

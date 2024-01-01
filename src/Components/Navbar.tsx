@@ -4,6 +4,7 @@ import Person from '../assets/Person.svg'
 import Search from '../assets/Search.svg'
 import Cart from '../assets/Cart.svg'
 import 'tailwindcss/tailwind.css';
+import { Link } from 'react-router-dom'
 
 interface navProp {
     count: number;
@@ -39,10 +40,12 @@ const Navbar: React.FC<navProp> = ({count}) => {
                     <section className="nav-widget relative flex h-fit">
                         <img src={Search} className='mr-2 cursor-pointer' />
                         <img src={Person} className='mr-2 cursor-pointer' />
+                        <Link to='/cart'>
                         <img src={Cart} className='mr-2 cursor-pointer' />
                         <section className='absolute right-[4px] top-[-3px]' style={{ color: 'white', fontSize: 'x-small', width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'blue' }}>
                             <p className='text-center'>{count}</p>
                         </section>
+                        </Link>
                     </section>
                 </div>
             </nav>
